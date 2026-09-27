@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Kadam — Data, Python & AI/ML Technologist</title>
+    <!-- Open Graph Metadata -->
+    <meta property="title" content="Vaishnavi Kadam — Data, Python & AI/ML Technologist">
+    <meta property="description" content="1+ years of hands-on experience across data, Python, technology and business operations.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        paper: '#FBFBFA',
+                        ink: '#121212',
+                        muted: '#666665',
+                        subtle: '#EAEAE6',
+                        accent: '#2563EB',
+                        accentDark: '#1D4ED8',
+                        cardBg: '#FFFFFF',
+                        borderSubtle: '#E2E2DE'
+                    },
+                    boxShadow: {
+                        'editorial': '0 4px 20px -2px rgba(18, 18, 18, 0.05)',
+                        'editorial-hover': '0 10px 30px -4px rgba(18, 18, 18, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBFBFA;
+            color: #121212;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .mono-tag {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .editorial-border {
+            border-color: #E2E2DE;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FBFBFA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D1CB;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A3A39D;
+        }
+        .tab-active {
+            background-color: #121212 !important;
+            color: #FBFBFA !important;
+        }
+        /* Video Introduction Section */
+        .video-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--card-bg, #FFFFFF);
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E2E2DE;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink selection:bg-accent selection:text-white">
+
+    <!-- Navigation / Header -->
+    <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-md border-b border-borderSubtle transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="group flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-ink text-paper flex items-center justify-center font-bold text-sm tracking-tighter group-hover:bg-accent transition-colors">
+                    VK
+                </div>
+                <div>
+                    <span class="font-bold tracking-tight text-lg block leading-none">Vaishnavi Kadam</span>
+                    <span class="mono-tag text-xs text-muted mt-1 block">Data & Python Developer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-muted">
+                <a href="#about" class="hover:text-ink transition-colors">About</a>
+                <a href="#experience" class="hover:text-ink transition-colors">Experience</a>
+                <a href="#video" class="hover:text-ink transition-colors">Video</a>
+                <a href="#projects" class="hover:text-ink transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-ink transition-colors">Skills</a>
+                <a href="#philosophy" class="hover:text-ink transition-colors">Philosophy</a>
+                <a href="#connect" class="hover:text-ink transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action CTA & Mobile Menu Toggle -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#connect" class="px-5 py-2.5 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-all shadow-sm">
+                    Let's Talk
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden text-ink focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-paper border-b border-borderSubtle px-6 py-6 shadow-xl flex flex-col space-y-4">
+            <a href="#about" class="mobile-link text-lg font-medium py-2 border-b border-subtle">About</a>
+            <a href="#experience" class="mobile-link text-lg font-medium py-2 border-b border-subtle">Experience</a>
+            <a href="#video" class="mobile-link text-lg font-medium py-2 border-b border-subtle">Video</a>
+            <a href="#projects" class="mobile-link text-lg font-medium py-2 border-b border-subtle">Projects</a>
+            <a href="#skills" class="mobile-link text-lg font-medium py-2 border-b border-subtle">Skills</a>
+            <a href="#philosophy" class="mobile-link text-lg font-medium py-2 border-b border-subtle">Philosophy</a>
+            <a href="#connect" class="mobile-link text-lg font-medium py-2 text-accent">Let's Connect</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 md:pt-28 md:pb-36 border-b border-borderSubtle overflow-hidden">
+        <div class="absolute top-10 right-10 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-4xl">
+                <!-- Positioning Pills -->
+                <div class="flex flex-wrap items-center gap-2 mb-6">
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">Data</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">•</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">Python</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">•</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">AI/ML</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">•</span>
+                    <span class="mono-tag px-3 py-1 bg-subtle text-ink text-xs rounded-full font-medium tracking-wide">Technology</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-ink mb-6 leading-[1.1]">
+                    VAISHNAVI KADAM
+                </h1>
+
+                <div class="flex flex-wrap items-center gap-4 text-muted font-medium text-base md:text-lg mb-8">
+                    <span class="flex items-center gap-2 text-ink font-semibold"><i class="fa-solid fa-briefcase text-accent"></i> 1+ Years Hands-on Experience</span>
+                    <span class="text-subtle">•</span>
+                    <span>BCA Graduate (Swami Ramanand Teerth Marathwada University)</span>
+                </div>
+
+                <p class="text-xl md:text-2xl text-muted font-light mb-10 max-w-2xl leading-relaxed">
+                    "I like turning messy problems into things that actually work."
+                </p>
+
+                <!-- Action CTAs -->
+                <div class="flex flex-wrap items-center gap-4 mb-12">
+                    <a href="#projects" class="px-8 py-4 rounded-full bg-ink text-paper font-semibold text-sm hover:bg-accent transition-all shadow-editorial hover:shadow-editorial-hover flex items-center gap-2 group">
+                        View My Work <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#resume" onclick="openResumeModal(event)" class="px-8 py-4 rounded-full bg-white border border-borderSubtle text-ink font-semibold text-sm hover:border-ink transition-all shadow-sm">
+                        Download Resume
+                    </a>
+                    <a href="#connect" class="px-8 py-4 rounded-full bg-subtle text-ink font-semibold text-sm hover:bg-zinc-200 transition-all">
+                        Let's Connect
+                    </a>
+                </div>
+                
+
+                <!-- Subtle Social Links -->
+                <div class="flex items-center space-x-6 pt-6 border-t border-borderSubtle">
+                    <span class="mono-tag text-xs text-muted uppercase tracking-widest">Profiles:</span>
+                    <a href="https://www.linkedin.com/in/vaishnaviiikadam/" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors flex items-center gap-1.5 text-sm font-medium">
+                        <i class="fa-brands fa-linkedin text-base"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/vaishnavikadam15-code" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors flex items-center gap-1.5 text-sm font-medium">
+                        <i class="fa-brands fa-github text-base"></i> GitHub
+                    </a>
+                    <a href="mailto:vaishnavikadam414@gmail.com" class="text-muted hover:text-accent transition-colors flex items-center gap-1.5 text-sm font-medium">
+                        <i class="fa-solid fa-envelope text-base"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Video Introduction Section -->
+    <section id="video" class="video-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="video-container">
+                <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-3">
+                    01 — A Little About Me
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink mb-4">
+                    Meet Vaishnavi
+                </h2>
+                <p class="text-muted text-lg mb-8 max-w-2xl mx-auto">
+                    A short introduction to who I am, what I build, and what I’m curious about.
+                </p>
+
+                <div class="video-wrapper">
+                    <video controls playsinline preload="metadata">
+                        <source src="intro-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <p class="text-xs text-muted mt-4">
+                    Replace <span class="mono-tag">"intro-video.mp4"</span> with your actual introductory video file.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who I Am Section -->
+    <section id="about" class="py-24 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4">
+                    <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">02 — Who I Am</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink">
+                        Rooted in logic, shaped by real-world practice.
+                    </h2>
+                </div>
+                <div class="lg:col-span-8 space-y-6 text-lg text-muted font-normal leading-relaxed">
+                    <p class="text-ink font-medium">
+                        I am a BCA graduate with over a year of combined hands-on experience through internships and professional technical environments, focusing on data analysis, software development, and systems operations.
+                    </p>
+                    <p>
+                        My work revolves around Python, SQL, Power BI, and backend frameworks like Django and Flask. Whether it is analyzing 119K+ booking records, building inventory tracking systems, writing technical documentation, or coordinating stakeholder and procurement requirements, I enjoy the complete loop of problem diagnosis to operational deployment.
+                    </p>
+                    <div class="p-6 bg-white rounded-2xl border border-borderSubtle shadow-editorial flex flex-col md:flex-row items-center justify-between gap-4 mt-6">
+                        <div>
+                            <span class="mono-tag text-xs text-accent font-semibold block uppercase">Current Focus</span>
+                            <span class="text-ink font-bold text-base">Data Analytics • Python Systems • AI/ML Integration</span>
+                        </div>
+                        <div class="mono-tag text-xs bg-subtle px-4 py-2 rounded-full text-muted">
+                            📍 Pune / Mumbai / Bengaluru / Remote
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 border-b border-borderSubtle bg-white/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">03 — Experience</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink">
+                    Where I’ve Built & Contributed
+                </h2>
+                <p class="text-muted mt-2">A timeline of practical roles spanning robotics software and technical analytics.</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="max-w-4xl space-y-12 relative before:absolute before:inset-0 before:left-7 before:w-0.5 before:bg-borderSubtle">
+                
+                <!-- Experience Item 1 -->
+                <div class="relative flex items-start space-x-6 group">
+                    <div class="w-14 h-14 rounded-2xl bg-ink text-paper flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-editorial group-hover:bg-accent transition-colors">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex-1 transition-all hover:shadow-editorial-hover">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <h3 class="text-xl font-bold text-ink">Software / Python Intern</h3>
+                            <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded-full text-muted font-medium">BotBruz Robotics</span>
+                        </div>
+                        <p class="text-muted text-sm mb-6 leading-relaxed">
+                            Contributed to core internal software tooling, focusing on database architectures, backend routing, and inventory tracking systems.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Independently designed and developed an Inventory Management System with real-time stock tracking and low-stock alert triggers.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Implemented database models, data validation logic, and server endpoints using Python, Django, and Flask.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Conducted system testing, debugging sessions, and prepared structured technical documentation for team handover.</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-subtle">
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Python</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Django</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Flask</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">SQL</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">HTML/CSS</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Testing & Docs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative flex items-start space-x-6 group">
+                    <div class="w-14 h-14 rounded-2xl bg-ink text-paper flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-editorial group-hover:bg-accent transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex-1 transition-all hover:shadow-editorial-hover">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <h3 class="text-xl font-bold text-ink">Data Analytics & Technical Intern</h3>
+                            <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded-full text-muted font-medium">Pritomatic Technologies</span>
+                        </div>
+                        <p class="text-muted text-sm mb-6 leading-relaxed">
+                            Handled data collection pipelines, analytical reporting, product quality testing, and cross-functional procurement coordination.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Collected, cleaned, and analyzed complex data pipelines including AQI environmental datasets using Python and Pandas.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Authored precise technical specifications, user guides, and product testing protocols.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm text-ink">
+                                <i class="fa-solid fa-check text-accent mt-1"></i>
+                                <span>Coordinated supplier communication and procurement operations while delivering structured analytical reports for management review.</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-subtle">
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Python / Pandas</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Data Collection</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Technical Specs</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Procurement Operations</span>
+                            <span class="mono-tag text-xs bg-subtle px-2.5 py-1 rounded text-muted">Dashboard Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">04 — Projects & Case Studies</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink">
+                    Problems Solved & Systems Built
+                </h2>
+                <p class="text-muted mt-2">Deep-dive case studies into data dashboards, enterprise tooling, and AI/ML prototypes.</p>
+            </div>
+
+            <!-- Project Cards Stack -->
+            <div class="space-y-16">
+
+                <!-- Project 1: Hotel Booking Analytics Dashboard -->
+                <div class="bg-white rounded-3xl border border-borderSubtle p-8 md:p-12 shadow-editorial">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-subtle">
+                        <div>
+                            <span class="mono-tag text-xs bg-blue-50 text-accent px-3 py-1 rounded-full font-semibold">Data Analytics Case Study</span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-ink mt-2">Hotel Booking Analytics Dashboard</h3>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="mono-tag text-xs text-muted bg-subtle px-3 py-1.5 rounded-lg font-medium">119K+ Rows Analyzed</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">01 / The Problem</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    Hospitality operations struggle with unorganized booking patterns, high cancellation rates, and hidden revenue leakage. Management needed actionable clarity from over 119,000 reservation records to optimize pricing and guest retention strategies.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">02 / What I Built</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    An end-to-end interactive Power BI dashboard featuring dynamic DAX measures, trend forecasting, customer segmentation models, and cancellation risk indicators.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">03 / How It Works</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    Raw CSV reservation data was cleaned and modeled in Excel/Power Query, relationships established between guest demographics and lead times, and DAX formulas calculated cancellation ratios and revenue metrics dynamically upon filter selection.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-paper p-6 rounded-2xl border border-borderSubtle flex flex-col justify-between">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-4">Key Metrics & Results</h4>
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="p-4 bg-white rounded-xl border border-borderSubtle shadow-sm">
+                                        <span class="mono-tag text-xs text-muted block">Dataset Scale</span>
+                                        <span class="text-xl font-extrabold text-ink">119,000+</span>
+                                        <span class="text-xs text-muted block">Booking Rows</span>
+                                    </div>
+                                    <div class="p-4 bg-white rounded-xl border border-borderSubtle shadow-sm">
+                                        <span class="mono-tag text-xs text-muted block">Core Focus</span>
+                                        <span class="text-xl font-extrabold text-accent">Revenue & Risk</span>
+                                        <span class="text-xs text-muted block">Cancellation Tracking</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Primary Tools</span>
+                                        <span class="font-bold text-ink">Power BI, DAX, Excel</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Insight Delivered</span>
+                                        <span class="font-bold text-ink">Identified peak cancellation windows & customer lead times</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://github.com/vaishnavikadam15-code" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors flex items-center gap-2">
+                                    <i class="fa-brands fa-github"></i> View Repository
+                                </a>
+                                <span class="text-xs text-muted italic">Dataset prepped & structured for executive reporting.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-subtle">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Power BI</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">DAX</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Data Preparation</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Customer Segmentation</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Inventory Management System -->
+                <div class="bg-white rounded-3xl border border-borderSubtle p-8 md:p-12 shadow-editorial">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-subtle">
+                        <div>
+                            <span class="mono-tag text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-semibold">Software Development Case Study</span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-ink mt-2">Inventory Management System</h3>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="mono-tag text-xs text-muted bg-subtle px-3 py-1.5 rounded-lg font-medium">BotBruz Robotics Internship</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">01 / The Problem</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    Manual tracking of warehouse components often resulted in stock discrepancies, duplicate item entries, and unflagged critical stock depletion, slowing down assembly schedules.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">02 / What I Built</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    A robust inventory tracking application designed to monitor item quantities, categorize robotic hardware components, and execute automated low-stock alerts.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">03 / Workflow Visualization</h4>
+                                <div class="bg-paper p-4 rounded-xl border border-borderSubtle mono-tag text-xs text-ink space-y-1">
+                                    <div class="text-accent font-bold">Input Data (User Form / CSV)</div>
+                                    <div class="text-muted">↓</div>
+                                    <div>Validation Layer (Duplicate & Schema Check)</div>
+                                    <div class="text-muted">↓</div>
+                                    <div>SQL Database Persistence</div>
+                                    <div class="text-muted">↓</div>
+                                    <div>Inventory Tracking & Low Stock Detection Trigger</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-paper p-6 rounded-2xl border border-borderSubtle flex flex-col justify-between">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-4">Technology Stack & Impact</h4>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Backend Framework</span>
+                                        <span class="font-bold text-ink">Python, Django / Flask</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Database & Validation</span>
+                                        <span class="font-bold text-ink">SQL, Pandas, Form Validators</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Operational Result</span>
+                                        <span class="font-bold text-ink">Reduced manual logging errors & streamlined stock audits</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://github.com/vaishnavikadam15-code" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors flex items-center gap-2">
+                                    <i class="fa-brands fa-github"></i> View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-subtle">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Python</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Django / Flask</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">SQL Database</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: AI/ML Predictive Model Prototype -->
+                <div class="bg-white rounded-3xl border border-borderSubtle p-8 md:p-12 shadow-editorial">
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-subtle">
+                        <div>
+                            <span class="mono-tag text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full font-semibold">AI / Machine Learning Project</span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-ink mt-2">Predictive Classification & Regression Toolkit</h3>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="mono-tag text-xs text-muted bg-subtle px-3 py-1.5 rounded-lg font-medium">Applied ML / EDA</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">01 / The Problem</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    Analyzing multivariate datasets to predict numerical outcomes and classify categorical patterns without overfitting or noise interference.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-1">02 / Approach & Model</h4>
+                                <p class="text-ink text-base leading-relaxed">
+                                    Performed exploratory data analysis (EDA), feature scaling, and data normalization, followed by implementing Scikit-learn regression and clustering algorithms to evaluate error margins.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-paper p-6 rounded-2xl border border-borderSubtle flex flex-col justify-between">
+                            <div>
+                                <h4 class="mono-tag text-xs uppercase font-bold text-muted mb-4">Technologies & Outcome</h4>
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Model Libraries</span>
+                                        <span class="font-bold text-ink">Python, Scikit-learn, NumPy</span>
+                                    </div>
+                                    <div class="flex items-center justify-between text-sm py-2 border-b border-subtle">
+                                        <span class="font-medium text-muted">Evaluation Metric</span>
+                                        <span class="font-bold text-ink">RMSE, Confusion Matrix</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://github.com/vaishnavikadam15-code" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors flex items-center gap-2">
+                                    <i class="fa-brands fa-github"></i> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-subtle">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Python</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Scikit-learn</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">Regression & Clustering</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1 rounded text-muted">EDA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="py-24 border-b border-borderSubtle bg-white/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">05 — Skills Matrix</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink">
+                    Technical & Professional Competencies
+                </h2>
+                <p class="text-muted mt-2">Grouped by domain expertise without redundant logos or clutter.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Category 1: Data -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-accent flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ink">Data</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Python</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">SQL / MySQL</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Pandas</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">NumPy</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Excel</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Power BI</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">DAX</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Tableau</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">EDA</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Statistics</span>
+                    </div>
+                </div>
+
+                <!-- Category 2: Development -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ink">Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Python</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">FastAPI</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Flask</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Django</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">REST APIs</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">HTML</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">CSS</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: AI / ML -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ink">AI / ML</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Machine Learning</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Scikit-learn</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Regression</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Clustering</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Predictive Modelling</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">AI Concepts</span>
+                    </div>
+                </div>
+
+                <!-- Category 4: Cloud / Tools -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ink">Cloud / Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">AWS</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Jira</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Git</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Category 5: Business / Professional -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ink">Business / Professional Operations</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Data Analysis</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Reporting</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Technical Documentation</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Business Analysis</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Stakeholder Coordination</span>
+                        <span class="mono-tag text-xs bg-subtle px-3 py-1.5 rounded-lg text-ink font-medium">Procurement / Technical Operations</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond the Resume Section -->
+    <section id="philosophy" class="py-24 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-16">
+                <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">06 — Beyond the Resume</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink mb-4">
+                    How I Think & How I Work
+                </h2>
+                <p class="text-muted text-lg italic">
+                    "Somewhere between dashboards, Python scripts and figuring out why the API isn't responding."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Principle 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex flex-col justify-between">
+                    <div>
+                        <span class="mono-tag text-xs text-accent font-bold block mb-3">01 / PROBLEM DIAGNOSIS</span>
+                        <h3 class="text-xl font-bold text-ink mb-3">Understand the problem first.</h3>
+                        <p class="text-muted leading-relaxed">
+                            I prefer understanding why something needs to be built before jumping into the solution. Clarifying constraints and expected outcomes saves hours of unnecessary coding.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-subtle mono-tag text-xs text-muted">
+                        Clarity over hasty execution
+                    </div>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex flex-col justify-between">
+                    <div>
+                        <span class="mono-tag text-xs text-accent font-bold block mb-3">02 / UTILITY</span>
+                        <h3 class="text-xl font-bold text-ink mb-3">Make data useful.</h3>
+                        <p class="text-muted leading-relaxed">
+                            Raw information by itself is just storage. I like turning numbers into clear narratives or dashboards that can actually support a business or operational decision.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-subtle mono-tag text-xs text-muted">
+                        Actionable insights
+                    </div>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex flex-col justify-between">
+                    <div>
+                        <span class="mono-tag text-xs text-accent font-bold block mb-3">03 / ITERATION</span>
+                        <h3 class="text-xl font-bold text-ink mb-3">Build. Test. Improve.</h3>
+                        <p class="text-muted leading-relaxed">
+                            I enjoy the process of constructing software, testing edge cases, finding what breaks, and refining it until it operates reliably under real-world conditions.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-subtle mono-tag text-xs text-muted">
+                        Robust engineering mindset
+                    </div>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-borderSubtle shadow-editorial flex flex-col justify-between">
+                    <div>
+                        <span class="mono-tag text-xs text-accent font-bold block mb-3">04 / CURIOSITY</span>
+                        <h3 class="text-xl font-bold text-ink mb-3">Stay curious.</h3>
+                        <p class="text-muted leading-relaxed">
+                            My interests sit across data, software, AI and business operations, so I am continuously exploring how these disciplines intersect to solve complex challenges.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-subtle mono-tag text-xs text-muted">
+                        Continuous cross-domain learning
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-24 border-b border-borderSubtle bg-white/50 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">07 — Complete Picture</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-ink mb-4">
+                Want the complete picture?
+            </h2>
+            <p class="text-muted text-lg max-w-xl mx-auto mb-10">
+                My resume gives you the detailed version of my experience, skills, internship projects, and academic background.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <button onclick="openResumeModal(event)" class="px-8 py-4 rounded-full bg-ink text-paper font-semibold text-sm hover:bg-accent transition-all shadow-editorial flex items-center gap-2">
+                    <i class="fa-solid fa-eye"></i> View Resume
+                </button>
+                <button onclick="downloadResumeFile(event)" class="px-8 py-4 rounded-full bg-white border border-borderSubtle text-ink font-semibold text-sm hover:border-ink transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> Download Resume PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Connect Section -->
+    <section id="connect" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="mono-tag text-xs uppercase tracking-widest text-accent font-semibold block mb-2">08 — Let's Connect</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-ink mb-6">
+                        Have an opportunity, idea, or interesting problem?
+                    </h2>
+                    <p class="text-muted text-lg mb-8 leading-relaxed">
+                        I'm always open to conversations around Data Analytics, Python Development, Software Engineering, AI/ML, and Tech Operations.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3 text-ink font-medium">
+                            <div class="w-10 h-10 rounded-full bg-subtle flex items-center justify-center text-accent">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span>vaishnavikadam414@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-ink font-medium">
+                            <div class="w-10 h-10 rounded-full bg-subtle flex items-center justify-center text-accent">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>Pune / Mumbai / Bengaluru / Remote</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="https://linkedin.com/in/vaishnaviiikadam" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/vaishnavikadam15-code" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:vaishnavikadam414@gmail.com" class="px-6 py-3 rounded-full bg-subtle text-ink text-xs font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Email Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Quick Message Form -->
+                <div class="lg:col-span-6 bg-white p-8 md:p-10 rounded-3xl border border-borderSubtle shadow-editorial">
+                    <h3 class="text-2xl font-bold text-ink mb-2">Send a Quick Message</h3>
+                    <p class="text-muted text-sm mb-6">Drop a note and I will get back to you promptly.</p>
+                    
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block mono-tag text-xs uppercase text-muted mb-2 font-medium">Your Name</label>
+                            <input type="text" id="sender-name" required class="w-full px-4 py-3 rounded-xl border border-borderSubtle focus:outline-none focus:border-accent text-sm" placeholder="Recruiter / Hiring Manager">
+                        </div>
+                        <div>
+                            <label class="block mono-tag text-xs uppercase text-muted mb-2 font-medium">Your Email</label>
+                            <input type="email" id="sender-email" required class="w-full px-4 py-3 rounded-xl border border-borderSubtle focus:outline-none focus:border-accent text-sm" placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label class="block mono-tag text-xs uppercase text-muted mb-2 font-medium">Message</label>
+                            <textarea id="sender-msg" rows="4" required class="w-full px-4 py-3 rounded-xl border border-borderSubtle focus:outline-none focus:border-accent text-sm resize-none" placeholder="Let's discuss an open role in..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-ink text-paper font-semibold text-sm hover:bg-accent transition-colors shadow-sm">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-800 rounded-xl text-sm font-medium text-center">
+                        Thank you! Your message has been prepared for sending.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-borderSubtle bg-paper">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted">
+            <div>
+                <span class="font-bold text-ink">Vaishnavi Kadam</span> — Data, Python & AI/ML Technologist
+            </div>
+            <div class="mono-tag text-xs text-muted">
+                © 2026 Vaishnavi Kadam. Built with clean HTML, CSS & JS.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div class="px-6 py-4 border-b border-borderSubtle flex items-center justify-between bg-paper">
+                <div>
+                    <h3 class="font-bold text-lg text-ink">Vaishnavi Kadam — Resume Preview</h3>
+                    <span class="mono-tag text-xs text-muted">Data Analytics • Python • AI/ML • Technology</span>
+                </div>
+                <button onclick="closeResumeModal()" class="w-8 h-8 rounded-full bg-subtle flex items-center justify-center text-ink hover:bg-zinc-200 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto space-y-6 text-sm text-muted">
+                <div class="border-b border-subtle pb-4">
+                    <h4 class="text-xl font-bold text-ink mb-1">VAISHNAVI KADAM</h4>
+                    <p class="mono-tag text-xs text-accent">Pune / Mumbai / Bengaluru / Remote | vaishnavikadam414@gmail.com</p>
+                </div>
+                <div>
+                    <h5 class="mono-tag text-xs uppercase font-bold text-ink mb-2">Professional Summary</h5>
+                    <p class="leading-relaxed">BCA Graduate with 1+ years of combined hands-on experience across Data, Python, Technology, and Operations. Skilled in Python, SQL, Power BI, Excel, and backend systems with a proven record of building inventory management applications and analyzing large data assets.</p>
+                </div>
+                <div>
+                    <h5 class="mono-tag text-xs uppercase font-bold text-ink mb-2">Education</h5>
+                    <p class="font-semibold text-ink">Bachelor of Computer Applications (BCA)</p>
+                    <p class="text-xs">Swami Ramanand Teerth Marathwada University</p>
+                </div>
+                <div>
+                    <h5 class="mono-tag text-xs uppercase font-bold text-ink mb-2">Experience</h5>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold text-ink">Software / Python Intern — BotBruz Robotics</p>
+                            <p class="text-xs italic mb-1">Inventory Management Systems, Django/Flask, SQL, Testing & Docs</p>
+                            <p class="text-xs">Independently engineered inventory tracking modules, automated low-stock detection, and database models.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-ink">Data Analytics & Technical Intern — Pritomatic Technologies</p>
+                            <p class="text-xs italic mb-1">Data Collection, Pandas, AQI Datasets, Product Specifications & Procurement</p>
+                            <p class="text-xs">Processed environmental and sensor datasets, authored product specifications, and coordinated procurement operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-6 py-4 border-t border-borderSubtle bg-paper flex items-center justify-between">
+                <span class="mono-tag text-xs text-muted">Ready for Junior / Entry-Level Roles</span>
+                <button onclick="downloadResumeFile(event)" class="px-6 py-2.5 rounded-full bg-ink text-paper text-xs font-semibold hover:bg-accent transition-colors">
+                    Download PDF Version
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Mobile Menu & Interactivity -->
+    <script>
+        // Mobile Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Resume Modal Handlers
+        function openResumeModal(e) {
+            e.preventDefault();
+            document.getElementById('resume-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resume-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Download Simulation
+        function downloadResumeFile(e) {
+            e.preventDefault();
+            // Create a temporary text blob simulating resume download
+            const resumeContent = "VAISHNAVI KADAM\nData • Python • AI/ML • Technology\n1+ Years Experience | BCA Graduate\nEmail: vaishnavikadam.contact@gmail.com\n\nExperience:\n- Software / Python Intern at BotBruz Robotics\n- Data Analytics / Technical Intern at Pritomatic Technologies\n\nProjects:\n- Hotel Booking Analytics Dashboard (119K+ rows, Power BI, DAX)\n- Inventory Management System (Python, Django, SQL)\n- AI/ML Predictive Models (Scikit-learn)";
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Vaishnavi_Kadam_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            // Close modal if open
+            closeResumeModal();
+        }
+
+        // Contact Form Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('sender-name').value;
+            const email = document.getElementById('sender-email').value;
+            const msg = document.getElementById('sender-msg').value;
+
+            if(name && email && msg) {
+                document.getElementById('contact-form').reset();
+                const successBox = document.getElementById('form-success');
+                successBox.classList.remove('hidden');
+                setTimeout(() => {
+                    successBox.classList.add('hidden');
+                }, 5000);
+            }
+        }
+
+        // Close modal on background click
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('resume-modal');
+            if (e.target === modal) {
+                closeResumeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
